@@ -16,3 +16,6 @@ console.log(combinedAges)
 const combinedNames=combine("max","Yassin")
 
 console.log(combinedNames)
+
+let names="Hagenimana Yassin";
+console.log("My names are:"+names)
