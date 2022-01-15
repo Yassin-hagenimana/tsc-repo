@@ -12,6 +12,7 @@
     "config": "^3.3.7",
     "dayjs": "^1.10.7",
     "express": "^4.17.2",
+    "mongoose": "^6.1.6",
     "nodemon": "^2.0.15",
     "pino": "^7.6.3",
     "pino-pretty": "^7.3.0",
