@@ -9,8 +9,18 @@
   "author": "Yassin",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.1",
+    "config": "^3.3.7",
+    "cors": "^2.8.5",
+    "dayjs": "^1.8.36",
+    "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.6",
     "nodemon": "^2.0.15",
-    "typescript": "^4.5.4"
+    "pino": "^7.6.3",
+    "pino-pretty": "^7.3.0",
+    "typescript": "^4.5.4",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "pm2": "^5.1.2"
