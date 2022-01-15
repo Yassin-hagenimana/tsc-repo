@@ -1,22 +1,15 @@
-function adding(n1:number,n2:number){
-    return n1+n2;
+function combine(n1:number | string,n2:number | string){
+  let result;
+  if(typeof n1 === 'number' && n2 === 'number'){
+    result = n1 + n2
+}else{
+   result= n1.toString() +  n2.toString()
 }
-
-const q=10;
-const w=4.5
-
-const e=adding(q,w)
-console.log(e)
-
-const person={
-    name:"yassin",
-    age:10,
-    hobbies:["Cooking","Sports"]
+return result;
 }
+const combinedAges=combine(20,30)
+console.log(combinedAges)
 
-for(const hobby of person.hobbies){
-    console.log(hobby.toUpperCase())
-}
-let favorites:string[]
-favorites=["papa"]
-console.log(person)
+const combinedNames=combine("max","Yassin")
+
+console.log(combinedNames)
