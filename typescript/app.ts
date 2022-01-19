@@ -1,26 +1,32 @@
-const character ="yassin"
-console.log(character)
-const inputs=document.querySelectorAll("input")
-console.log(inputs)
+//classes
+class invoice{
+  client:string;
+  details:string;
+  amount:number;
 
-inputs.forEach(input=>{
-  console.log(input)
-})
+  constructor(client:string,details:string,amount:number){
+    this.client=client,
+    this.details=details,
+    this.amount=amount
+  }
 
-//arrays
-let arrayNames=["yassin","hagenimana","Draxler"];
-arrayNames.push("Ki")
-
-//objects
-
-let address={
-  name:"Yassin",
-  district:"Kayonza",
-  age:30,
-  phone:"0786621407"
+  format(){
+    return `${this.client} owes $ ${this.amount}  for ${this.details}`
+  }
 }
 
-console.log(address)
+const invOne=new invoice("Yassin","worked on website",400)
+const invTwo=new invoice("Draxler","Worked on social media",700)
+//console.log(invOne,invTwo)
+
+let invoices:invoice[]=[];
+invoices.push(invOne)
+invoices.push(invTwo)
+
+invoices.forEach(inv=>{
+  console.log(inv.client,inv.details,inv.amount,inv.format())
+})
+
 
 const form=document.querySelector("form")!
 //inputs
