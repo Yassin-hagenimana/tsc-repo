@@ -1,25 +1,24 @@
-//classes
-class invoice{
-  // client:string;
-  // details:string;
-  // amount:number;
+import { Invoice } from "./src/classes/invoice.js";
+import { Payment } from "./src/classes/Payment.js";
+import { HasFormatter } from "./src/Interfaces/HasFormatter.js";
 
-  constructor(
-    readonly client:string,
-    private amount:string,
-    public details:number
-  ){}
 
-  format(){
-    return `${this.client} owes $ ${this.amount}  for ${this.details}`
-  }
-}
+let docOne:HasFormatter
+let docTwo:HasFormatter
+docOne=new Invoice("Yassin","work of website",100)
+docTwo=new Invoice("Draxler","work of backend",600)
 
-const invOne=new invoice("Yassin","worked on website",400)
-const invTwo=new invoice("Draxler","Worked on social media",700)
-//console.log(invOne,invTwo)
+let docs:HasFormatter[]=[]
+docs.push(docOne)
+docs.push(docTwo)
 
-let invoices:invoice[]=[];
+console.log(docs)
+
+const invOne=new Invoice("Yassin","worked on website",400)
+const invTwo=new Invoice("Draxler","Worked on social media",700)
+
+
+let invoices:Invoice[]=[];
 invoices.push(invOne)
 invoices.push(invTwo)
 
